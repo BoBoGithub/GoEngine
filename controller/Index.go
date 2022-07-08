@@ -7,6 +7,7 @@
 package controller
 
 import (
+	"GoEngine/entity"
 	"GoEngine/libs/e"
 	"GoEngine/libs/response"
 	"GoEngine/service"
@@ -34,5 +35,32 @@ func GetUserGameList(c *gin.Context) {
 	//返回用户游戏列表
 	response.Return(c, e.SUCCESS, map[string]interface{}{
 		"game_list": userGameData,
+	})
+}
+
+//获取游戏数据
+func GetGameInfo(c *gin.Context) {
+	//接收token参数
+	token := c.DefaultQuery("token", "")
+	// token := c.DefaultPostForm("token", "")
+
+	//设置接收请求参数变量
+	gameParam := entity.GameRequestParam{}
+
+	//绑定请求参数
+	err := c.ShouldBindJSON(&gameParam)
+	if err != nil {
+		response.ThrowException("3001 GetGameInfo BindJSON error:", err)
+	}
+
+	//调用Service查询游戏信息
+	// gameInfoData := GameService::GetGameInfo(gameParam)
+
+	//返回游戏信息
+	response.Return(c, e.SUCCESS, map[string]interface{}{
+		"token":    token,
+		"app_id":   gameParam.AppId,
+		"app_name": gameParam.AppName,
+		"app_desc": gameParam.AppDesc,
 	})
 }

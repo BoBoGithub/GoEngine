@@ -24,4 +24,7 @@ func InitRouter(router *gin.Engine) {
 	//提取游戏信息
 	routerGroup.POST("/game/list", controller.GetUserGameList)
 
+	//查询游戏信息
+	routerGroup.POST("/game/info", controller.GetGameInfo)
+
 }

@@ -71,3 +71,10 @@ type EscapeString string
 func (esc EscapeString) MarshalJSON() ([]byte, error) {
 	return []byte(strconv.QuoteToASCII(string(esc))), nil
 }
+
+//设置请求游戏参数结构
+type GameRequestParam struct {
+	AppId   int    `json:"app_id"`
+	AppName string `json:"app_name"`
+	AppDesc string `json:"app_desc"`
+}
