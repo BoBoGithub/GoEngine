@@ -1,0 +1,7 @@
+{{define "index/index"}}
+{{template "public/header" .}}
+        <p>项目: {{.name}}</p>
+        <p>描述: {{.desc}}</p>
+        <img src="/static/play.jpg" width="800px" height="300px" />
+    {{template "public/footer" .}}
+{{end}}

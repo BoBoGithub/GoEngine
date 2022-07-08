@@ -1,0 +1,24 @@
+# 项目配置信息文件
+
+# MySQL 数据库链接配置 - 开发环境
+MySQL :
+ - key        : bbs
+   dirver     : mysql
+   host       : 127.0.0.1
+   user_name  : root
+   password   : 123456
+   port       : 3306
+   charset    : utf8
+   database   : data_nga
+
+ - key        : data
+   dirver     : mysql
+   host       : 127.0.0.1
+   user_name  : root
+   password   : 123456
+   port       : 3306
+   charset    : utf8
+   database   : data_nga
+
+# AES-CBC模式 加密私钥Key - 长度必须为16, 24或者32
+EncryptionPrivateKey : 6653001680917864
