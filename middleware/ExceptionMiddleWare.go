@@ -4,7 +4,7 @@
  * 主要处理抛出的panic错误异常
  *
  * @param addTime 2020-09-18
- * @param author  ChengBo
+ * @param author  BoBo
  */
 package middleware
 

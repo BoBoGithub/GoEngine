@@ -2,7 +2,7 @@
  * 当前模块使用的结构体定义
  *
  * @param addTime 2022-05-06
- * @param author  ChengBo
+ * @param author  BoBo
  */
 package entity
 
